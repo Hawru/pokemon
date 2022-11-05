@@ -13,7 +13,8 @@ h1{
     border: 2px solid black;
     text-align: center;
     height: 80px;
-    font-size: 4.0rem;
+    font-size: 3.0rem; 
+    padding: 10px 0;
 }
 
 .Pokemon{
@@ -27,6 +28,7 @@ h1{
 .Pokemon article{ 
     background-color: yellow;
     border-radius: 10px;
+    grid-column: span 4;
 }
 
 .type{
@@ -46,13 +48,11 @@ h1{
 
 .img-pokemon{width: 50%; display: block; margin: auto;}
 
-@media only screen and (min-width: 300px){
-    article{grid-column: span 4;}
-    h1{font-size: 3.0rem; padding: 10px 0;}
-}
+
 @media only screen and (min-width: 700px){
-    article{grid-column: span 2;}
+    .Pokemon article{grid-column: span 2;}
+    h1{font-size: 4.0rem; padding: 0;}
 }
 @media only screen and (min-width: 1000px){
-    article{grid-column: span 1;}
+    .Pokemon article{grid-column: span 1;}
 }
