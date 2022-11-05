@@ -1,0 +1,58 @@
+*{box-sizing: border-box; }
+
+body{
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #78adf7;
+}
+
+h1{
+    background-color: #2078FF;
+    color: yellow;
+    margin: 0;
+    border: 2px solid black;
+    text-align: center;
+    height: 80px;
+    font-size: 4.0rem;
+}
+
+.Pokemon{
+    margin: 20px 20px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.Pokemon article{ 
+    background-color: yellow;
+    border-radius: 10px;
+}
+
+.type{
+    display: inline-block;
+    align-items: center;
+    border-radius: 5px;
+    margin: 5px 1px;
+    padding: 5px;
+    color: white;
+    border: black 1px solid;
+}
+
+.stats{list-style: none; padding: 0; margin: 10px; text-align: left;}
+.stats li{
+    font-weight: bold;
+}
+
+.img-pokemon{width: 50%; display: block; margin: auto;}
+
+@media only screen and (min-width: 300px){
+    article{grid-column: span 4;}
+    h1{font-size: 3.0rem; padding: 10px 0;}
+}
+@media only screen and (min-width: 700px){
+    article{grid-column: span 2;}
+}
+@media only screen and (min-width: 1000px){
+    article{grid-column: span 1;}
+}

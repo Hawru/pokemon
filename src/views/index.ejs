@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <h1>
+        Pokemon  
+    </h1>
+    <section class="Pokemon">   
+    <% for (const p of pokemon) { %>
+        <article>
+            <h3><%= p.name.english%></h3>
+            <img src="/images/<%=p.img%>" alt="<%=p.name.english %>" class="img-pokemon">
+            <% for (const x of p.type) { %>
+                <% let color = "#000000" %>
+                <% if(x == "Grass") {color = "#22F900"} %> 
+                <% if(x == "Poison") {color = "#4A1E64"} %> 
+                <% if(x == "Water") {color = "#0090A7"} %> 
+                <% if(x == "Normal") {color = "#BDBDBD"} %>
+                <% if(x == "Bug") {color = "#69B90F"} %>  
+                <% if(x == "Fairy") {color = "#FF5FF5"} %>
+                <% if(x == "Fire") {color = "#FF0F00"} %>
+                <% if(x == "Electric") {color = "#8B9000"} %>
+                <% if(x == "Ground") {color = "#5F2500"} %>
+                <% if(x == "Rock") {color = "#C26F41"} %>
+                <% if(x == "Steel") {color = "#858585"} %>
+                <% if(x == "Psychic") {color = "#E826B9"} %>
+                <% if(x == "Ice") {color = "#92FEE9"} %>
+                <% if(x == "Fighting") {color = "#FF5908"} %>
+                <% if(x == "Flying") {color = "#C3F7FF"} %>
+                <% if(x == "Ghost") {color = "#350055"} %>
+                
+            <span class="type" style="background-color:<%=color%>; border:<%=color%> 1px solid"> <%= x %> </span>
+            <%  }  %>
+            <ul class="stats">
+                <li>HP: <%=p.base.HP%> </li>
+                <li>Attack: <%=p.base.Attack%></li>
+                <li>Defense: <%=p.base.Defense%></li>
+                <li>Sp. Attack: <%=p.base["Sp. Attack"]%></li>
+                <li>Sp. Defense: <%=p.base["Sp. Attack"]%></li>
+                <li>Speed: <%=p.base.Speed%></li>
+            </ul>
+        </article> 
+    <%  }  %> 
+    </section>
+</body>
+</html>
